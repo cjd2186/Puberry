@@ -1,0 +1,174 @@
+#hello-div{
+    font-size: 40pt;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+#title{
+    text-align: center;
+}
+
+.gray{
+    background-color: gray;
+}
+
+.bordered{
+    border: black solid 2px;
+}
+
+#search-div{
+    font-size: 100pt;
+    color: blue;
+}
+
+#home-img{
+    vertical-align: top;
+    text-align: center;
+    margin-top: 0;
+}
+
+.blue-base{
+    background-color: lightskyblue;
+}
+
+.white{
+    color: white;
+}
+
+.navy{
+    background-color: rgb(2, 2, 55);
+}
+
+
+.gray{
+    background-color: gray;
+}
+
+.lgray{
+    color: lightgray;
+}
+
+#right-desc{
+    text-align: right;
+    color: white;
+    border: gray 3px solid;
+    background-color: rgb(2, 2, 55);
+    border-radius: 10px;
+    padding-right: 5px;
+    margin-right: 5px;
+}
+
+#left-desc{
+    color: white;
+    border: gray 3px solid;
+    background-color: rgb(2, 2, 55);
+    border-radius: 10px;
+    padding-left: 5px;
+    margin-left: 20px
+}
+
+.item-link{
+    cursor: pointer;
+}
+
+.field {
+    margin-bottom: 10px;
+}
+
+.image-container {
+    position: relative; /* Set the container to relative positioning */
+    width: 354px; /* Set width of container */
+    height: 258px; /* Set height of container */
+    float: right;
+}
+
+.headshot{
+    position: absolute; /* Set the position of the first image to absolute */
+    top: 0; /* Adjust top position as needed */
+    left: 0; /* Adjust left position as needed */
+    z-index: 0; /* Set a higher z-index to bring this image to the front */
+}
+
+.medal{
+    width: 100px;
+    float: left; 
+    position: absolute; /* Set the position of the second image to absolute */
+    top: 0px; /* Adjust top position as needed */
+    left: 10px; /* Adjust left position as needed */
+    z-index: 1; /* Set a lower z-index to move this image behind the first */
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.font1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.underline{
+    text-decoration: underline; 
+}
+
+.italic{
+    font-style: italic;
+}
+
+.large{
+    font-size: large;
+}
+
+.inline{
+    display: inline-block;
+}
+
+li {
+    list-style-type: decimal;
+  }
+
+#add-submit{
+    color: white;
+    background-color: rgb(2, 2, 55);
+    font-size: x-large;
+}
+
+.error-message{
+    color: red;
+    font-weight: bold;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.red{
+    background-color: rgba(234, 114, 114, 0.901);
+}
+
+#confirmation-dialog{
+    margin-bottom: 30px;
+}
+
+#confirmation-dialog {
+    position: fixed;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 1000; /* Adjust as needed */
+}
+
+#confirmation-dialog p {
+    margin-bottom: 20px; /* Add whitespace below the paragraph */
+}
+
+#popular-items-container{
+    background-color: gray;
+}
+
+.popular-item{
+    background-color: lightgray;
+    font-family: 'Times New Roman', Times, serif;
+}

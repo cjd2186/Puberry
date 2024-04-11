@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8">
+        var socket = io();
+        socket.on('connect', function() {
+            socket.emit('my event', {data: 'I\'m connected!'});
+            console.log('my event', {data: 'I\'m connected!'});
+        });
+    </script>
+    <div class="container blue-base">
+        <h2>Lobby Details</h2>
+        {% for lobby in lobby_info %}
+            {% if lobby[0] == lobbyId %}
+        
+            <div class="box">
+                <span class="label">Lobby ID:</span>
+                <span id="Lobby ID">{{ lobby[0] }}</span>
+
+            </div>
+            <div class="box">
+                <span class="label">Current Players:</span>
+                <span id="currentPlayers">{{ lobby[1] }}</span>
+            </div>
+            <div class="box">
+                <span class="label">Minimum Players:</span>
+                <span id="minPlayers">{{ lobby[2] }}</span>
+            </div>
+            <div class="box">
+                <span class="label">Maximum Players:</span>
+                <span id="maxPlayers">{{ lobby[3] }}</span>
+            </div>
+            
+            <div class="box">
+                <span class="label">Game Start:</span>
+                <span id="game_start">{{ lobby[4] }}</span>
+            </div>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

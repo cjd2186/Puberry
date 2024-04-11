@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<html>
+    <head>
+        <title> Multiplayer Lobby</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"> console.log('import')</script>
+        <script type="text/javascript" charset="utf-8">
+            var socket = io(); //.connect('http://' + document.domain + ':' + location.port);
+            console.log("HERER")
+            socket.on('connect', function() {
+                socket.emit('my event', {data: 'I\'m connected!'});
+            });
+        </script>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+        <script>
+            let lobbies = {{data|tojson}} 
+        </script>
+    </head>
+    <body>
+    <div id="container-fluid">
+        <!--There should be a conceptual group whose goal is 
+        to indicate the purpose and the audience for the site. 
+        Consider using a title, an image, and some descriptive text.-->
+        <h1 id="title"> Welcome The Puberry Mulitplayer Lobby! </h1>
+        <br><br><br>
+        <h2> Pick a Lobby to join!</h2>
+        <div class="blue-base"> <br>
+        <div class="row">
+            <div class="col 6">
+                <h2 id="Open_Lobbies">
+                    Currently Available Lobbies:
+                    <ul id ="LobbyList">
+                    </ul>
+                </h2>
+            </div>
+            <div class ="col 6" id="home-img">
+                <img src="/static/Puberry_logo.png" alt="Puberry Logo" width="400"> 
+            </div>
+        </div>
+            <br>
+            <div class="row" id="hello-div"> 
+                <h2 class="col-12">
+                   
+                </h2>
+            </div>
+            <br><br><br><br>
+        </div><br>
+    </div> 
+    </body>
+</html>
+{% endblock %}
