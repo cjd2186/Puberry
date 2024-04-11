@@ -34,9 +34,9 @@ To run the application, follow these steps:
    or
 
 use gunicorn and wsgi script to run server: 
-'''bash
-gunicorn -w 4 -b 127.0.0.1:5000 wsgi:app
-'''
+   ```bash
+   gunicorn -w 4 -b 127.0.0.1:5000 wsgi:app
+   ```
 
 
 
