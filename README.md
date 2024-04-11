@@ -15,8 +15,7 @@ This application is a multiplayer lobby system built using Flask, Flask-SocketIO
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
-   cd multiplayer-lobby-app
+   git clone <https://github.com/cjd2186/Puberry>
    ```
 
 2. Install dependencies using pip:
