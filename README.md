@@ -82,7 +82,7 @@ The application consists of the following components:
 - duckDB
 - gunicorn
 
-##NOTE:
+## NOTE:
 * Although this application is not fully functional, there is a working front-end server functioning.
 * In addition, the backend lightweight duckDB database works properly, and has a series of functions in server.py that interact with the database
 * Although the functions are not called to work with the server, the logic and socket libraries needed for these functions are logically sound.
