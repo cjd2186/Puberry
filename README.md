@@ -28,12 +28,18 @@ This application is a multiplayer lobby system built using Flask, Flask-SocketIO
 
 To run the application, follow these steps:
 
-1. Create the database schema by running `create_database()` function.
-
-2. Start the Flask application:
+ Start the Flask application:
    ```bash
    python server.py
    ```
+   or
+
+use gunicorn and wsgi script to run server: 
+'''bash
+gunicorn -w 4 -b 127.0.0.1:5000 wsgi:app
+'''
+
+
 
 3. Access the application in your web browser at `http://localhost:5000`.
 
@@ -68,8 +74,6 @@ The application consists of the following components:
 - **Home Page**: Visit the home page (`/`) to view available lobbies and join or create new lobbies.
 
 - **Lobby Page**: Navigate to a specific lobby (`/lobby/<lobbyId>`) to interact with other players in real-time.
-
-- **use gunicorn and wsgi script to run server: $gunicorn -w 4 -b 127.0.0.1:5000 wsgi:app
 
 ## Dependencies
 
