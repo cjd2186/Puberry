@@ -15,8 +15,7 @@ This application is a multiplayer lobby system built using Flask, Flask-SocketIO
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
-   cd multiplayer-lobby-app
+   git clone <https://github.com/cjd2186/Puberry>
    ```
 
 2. Install dependencies using pip:
@@ -28,12 +27,18 @@ This application is a multiplayer lobby system built using Flask, Flask-SocketIO
 
 To run the application, follow these steps:
 
-1. Create the database schema by running `create_database()` function.
-
-2. Start the Flask application:
+ Start the Flask application:
    ```bash
    python server.py
    ```
+   or
+
+use gunicorn and wsgi script to run server: 
+   ```bash
+   gunicorn -w 4 -b 127.0.0.1:5000 wsgi:app
+   ```
+
+
 
 3. Access the application in your web browser at `http://localhost:5000`.
 
@@ -69,8 +74,6 @@ The application consists of the following components:
 
 - **Lobby Page**: Navigate to a specific lobby (`/lobby/<lobbyId>`) to interact with other players in real-time.
 
-- **use gunicorn and wsgi script to run server: $gunicorn -w 4 -b 127.0.0.1:5000 wsgi:app
-
 ## Dependencies
 
 - Flask
@@ -79,7 +82,7 @@ The application consists of the following components:
 - duckDB
 - gunicorn
 
-##NOTE:
+## NOTE:
 * Although this application is not fully functional, there is a working front-end server functioning.
 * In addition, the backend lightweight duckDB database works properly, and has a series of functions in server.py that interact with the database
 * Although the functions are not called to work with the server, the logic and socket libraries needed for these functions are logically sound.
